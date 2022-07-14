@@ -1,0 +1,324 @@
+<!--Animation in css-->
+
+<!DOCTYPE>
+<html lang="eng" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <title> Animation in CSS</title>
+
+    <style>
+        .container{
+            
+        }
+        .buildingImg img{
+            width: 100%;
+            height: 800px;
+            position:absolute;
+            animation-name: backgroundAnimation;
+            animation-duration: 1s;
+            animation-iteration-count: 2;
+
+        }
+
+        .cameraImg{
+            width: 20%;
+            height: 26%;
+            right: 900px;
+            top: 400px;
+            position:absolute;
+            animation-name: cameraSlide;
+            animation-duration: 0ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        .cheeseTEXT{
+            width: 100%;
+            height: 26%;
+            right: 900px;
+            top: 100px;
+            position:absolute;
+            animation-name: cheeseTEXTSlide;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            
+        }
+        .cheeseTEXT p{
+            font-size: 50px;
+            font-style: italic;
+            filter: contrast(30);
+        }
+
+        #im1{
+            height: 200px;
+            right: 100px;
+            top: 400px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 20ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im2{
+            height: 20%;
+            width: 10%;
+            right: 90px;
+            top: 90px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im3{
+            height: 20%;
+            width: 10%;
+            right: 500px;
+            top: 90px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 10ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im4{
+            height: 10%;
+            width: 5%;
+            left: 200px;
+            top: 90px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 25ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+        #im5{
+            height: 20%;
+            width: 10%;
+            right: 500px;
+            top: 400px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 26ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+        #im6{
+            height: 20%;
+            width: 10%;
+            right: 500px;
+            top: 400px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 23ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+        #im7{
+            height: 20%;
+            width: 10%;
+            left: 80px;
+            top: 400px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 12ms;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+        #im8{
+            height: 20%;
+            width: 10%;
+            left: 40px;
+            bottom: 400px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+        #im9{
+            height: 20%;
+            width: 10%;
+            left:100px;
+            bottom: 50px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 40s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im10{
+            height: 20%;
+            width: 10%;
+            left: 20px;
+            bottom: 200px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 25s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im11{
+            height: 20%;
+            width: 10%;
+            right: 500px;
+            bottom: 80px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+        #im12{
+            height: 20%;
+            width: 10%;
+            left: 500px;
+            bottom:50px;
+            position:absolute;
+            animation-name: heartAnimation;
+            animation-duration: 24ms;
+            animation-delay: 0s;
+            opacity: 20%;
+            animation-iteration-count: 1;
+            /* animation-timing-function: step-end; */
+        }
+
+
+
+
+        @keyframes cameraSlide {
+
+            from {opacity: 0%;}
+            to{opacity: 100%;}
+            
+        }
+
+        @keyframes cheeseTEXTSlide {
+
+            from {
+                animation-delay: 10s;
+                opacity: 0%;
+                color: red;
+            }
+
+            to{
+                opacity: 100%;
+                color: black;
+            }
+            
+        }
+
+        @keyframes backgroundAnimation {
+            from{
+                filter: invert(0%);
+            }
+
+            50%{
+                filter: invert(50%);
+            }
+
+            to{
+                filter: invert(0%);
+            }
+            
+        }
+
+        @keyframes heartAnimation {
+
+            0%{
+                filter: opacity(0%);
+            }
+
+            25%{
+                filter: opacity(20%);
+            }
+
+            50%{
+                filter: opacity(40%);
+            }
+
+            75%{
+                filter: opacity(0%);
+            }
+
+            95%{
+                filter: opacity(100%);
+            }
+
+            100%{
+                filter: opacity(0%);
+            }
+
+            
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="buildingImg">
+            <img src="images/build.jpg" alt="buldings image" title="Building Image">
+        </div>
+        <div class="cameraImg">
+            <img src="images/camera.png" alt="camera image" title="camera Image">
+        </div>
+        <div class="cheeseTEXT">
+            <p>CHEESE !</p>
+        </div>
+
+        <div class="heartImgs">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im1">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im2">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im3">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im4">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im5">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im6">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im7">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im8">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im9">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im10">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im11">
+            <img src="images/heart.jpg" alt="heart image" title="heart Image" id="im12">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
