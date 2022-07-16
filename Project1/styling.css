@@ -80,7 +80,13 @@ header a:hover{
 
 /** Content Section */
 
-#content{
-    width: 100%;
-
+#content img{
+    size: 100%;
+    padding-top: 20px;
+    opacity: 50%;
 }
+
+#content{
+    font-size: 20px;
+}
+

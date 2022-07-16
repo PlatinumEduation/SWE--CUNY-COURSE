@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Activity 8</title>
+
+    </head>
+    
+    <body>
+
+        <h1> Hesham Eldawy </h1>
+
+    
+        <script type="text/javascript">
+
+            checkName();
+            checkNum();
+            lottery();
+
+
+            function checkName()
+            {
+
+                var name = prompt("Enter a name");
+                prompt("Enter a name");
+
+                while(name == null || !isNaN(name))
+                {
+                    name = prompt(`${name} is invalid! Enter a name again: .`);  
+                    name = prompt("Enter a name"); 
+                }
+
+                name.toUpperCase();
+
+                console.log(`Welcome ${name}`);
+            }
+
+            function checkNum()
+            {
+
+                while(name == null || isNaN(name))
+                {
+                    var num = prompt("Enter a number");
+                }
+
+                if(num %2 == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+                prompt("Enter a name");
+            }
+
+            function lottery(num)
+            {
+
+                for(var i =0 ; i<num;i++)
+                {
+                    console.log(Math.random());
+                }
+
+            }
+        
+            
+        </script>
+
+    </body>
+
+</html>
