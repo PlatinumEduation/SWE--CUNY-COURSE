@@ -1,48 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng" dir="ltr">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <title>Activity 5</title>
+    <meta charset="utf-8">
+    <title>javascript Fundamentals</title>
 
-    </head>
+</head>
+
+<body>
+
+    <h1>Hesham Eldawy</h1>
+    <ol>
+        <li>Data Types</li>
+        <li>Variables</li>
+        <li>Operations</li>
+    </ol>
+
+    <br>
+    <hr>
+    <br>
+    <h2>JavaScript Essential: variables, strings, and arrays</h2>
+
+    <h3>variables</h3>
+    <p>
+
+        let NameOfVarable = Value;
+    </p>
+
+    <h3>strings</h3>
+    <p>
+        let name1 = "Peter Smith"; 
+        <br>
+        <br>
+        <b> <i>Strings are indexed</i> </b> 
+        <br><br>
+        Strings are considered an array of characters
+
+        <b>Strings are considered an array of characters</b>
+        <br>
+        let name = 'Kat Smith'; <br>
+        name[2] (output) t <br>
+        name[30] (output) undefined <br>
+
+        <br>
+        <br>
+        <b>Checking the length of a string</b>
+        <br>
+        <i>.length, </i> which returns the number of 
+        characters contained in the string object
+
+        <br>
+        let text = "Hello World!";<br>
+        let msgLength = text.length;<br>
+        msgLength  >> = 12<br>
+
+        <br>
+        <br>
+
+        <b>Converting to Upper and Lower Case</b>
+
+        <br>
+        toUpperCase() or to lower case with <br>
+        toLowerCase() method. <br>
+
+        <br>
+        <br>
+        <b>Remove white spaces</b>
+
+        <br>
+
+        Method trim() remove the white spaces in string
+
+        <br>
+        <br>
+
+        <b>Replacing string content</b>
+
+        <br><br>
+
+        let myString = "Queensborough Community College"; <br>
+        console.log(myString);<br>
+        let replaceString = myString.replace('Community','PARK') <br>
+        console.log(replaceString); <br>
+
+
+    </p>
+
+    <h3>arrays</h3>
+
+    <p> var fruits; <br>
+        fruits = ['oranges', 'apples', 'peaches']; //Create an array using square brackets <br>
+        console.log(fruits);
+    </p>
     
-    <body>
 
-        <h1> Hesham Eldawy </h1>
+    <script type="text/javascript">
+
+        //1. collect values of two variables from the keyboard and use them to display a message in the console
+        //2. will ask the user to enter a name and then a lucky number
+        //3. Diplay with + , and with #{}
+
+        var name;
+        var luckyNumber;
+
+        name = prompt('Enter your name: ');
+        luckyNumber = prompt('Enter your lucky number');
+
+        console.log('Enter your name is ' + name +' ,Your lucky number is ' + luckyNumber);
+        console.log(`Good Morning ${name}. Your entered number: ${luckyNumber}`);
+
+        // Ex2
+        /*
+        1. that will collect a word from the keyword,using the prompt method
+
+        */
+
+        var word = prompt('Enter a word: ');
+
+        console.log('a. Second character of string is: ',word[1]);
+
+        console.log(`b.The length of word ${word} is `, word.length);
+
+        console.log(`c.The word in UpperCase is : `, word.toUpperCase());
+
+        console.log(`d.By using Slicing(), the last two Characters of the word ${word} : `, word.slice(length-2));
+
+        //EX3
+
+        //create a mixed array with at least five values and apply different array method to it
+
+        mixedArray = new Array('oranges',2,true,'s',false);
+
+        console.log(`Mixed array with initial values: `, mixedArray);
+
+        var animal = prompt('Enter an animal: ');
+
+        mixedArray.push(animal);
+
+        console.log(`Mixed array with added to the end: `, mixedArray);
+
+        var negativeNum = prompt('Enter Negative Number : ');
+
+        parseInt(mixedArray.unshift(negativeNum));
+
+        console.log(`Mixed array with a new NEGATIVE NUMBER added to the front, beginning, of the array: `, mixedArray );
+
+        // create an independent copy of the mixed array and name it copyArray
+        // Reverse the values in the copyArray and display both the mixed array and the copyArray in the console as:
+
+        copyArray = new Array();
+        copyArray = mixedArray.concat();
+        copyArray.reverse();
+        console.log(`Mixed array ${mixedArray} and reverse of copy array: ${copyArray}`);
+ 
+        
 
 
-        <script type="text/javascript">
 
-            // Study
+    </script>
 
-            let name_ = 'will smith';
-            let namelength = name_.length;
-            let upperName = name.toUpperCase();
-            let lowerName = name.toLowerCase();
-
-            let trimmed = name_.trim()
-
-            name_.replace('_name','HEllo');
-
-            console.log(name_);
-
-        </script>
-    
-        <script type="text/javascript">
-
-        //Activity5 -1
-
-        let name = prompt('Enter your name: ');
-        let lucky_Number = prompt('Enter Your Lucky Number: ');
-
-        console.log('Welcome to the program ' + name + '. Your lucky number is ' + lucky_Number);
-        console.log(`Weclome to the program ${name}. Your lucky number is ${lucky_Number}`);
-              
-
-        </script>
-
-    </body>
+</body>
 
 </html>
