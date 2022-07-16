@@ -13,16 +13,77 @@
         <h1> Hesham Eldawy </h1>
 
         <p>
-            if, else if, else statement
-    Create a JS program that will ask the user to enter a value, could be a string or a number, in the dialog box. Once the value is entered, the program will print in the console the value and the value type. For example, if the user enters a negative number, let us say -6, the console will print: -6 is a negative number . Also, if the user enter a positive number, let us say 9, the console will print: 9 is a positive number . If the user enters a string, the console will print:_____ is a string. 
-switch statement
-    Using switch statement, write a JS program that will ask the user to select a color by entering a lowercase or uppercase character. Once the user has selected a color, the console will print a message as: You selected _____ color . If the user enters a character that is not in the list, the program will console: Color is not in the list! 
+            <ol>
+                <li>
+                  <b>if, else if, else statement</b> <br>
+                Create a JS program that will ask the user to enter a value, could be a string or a number, in the dialog box. Once the value is entered, the program will print in the console the value and the value type. For example, if the user enters a negative number, let us say -6, the console will print: -6 is a negative number . Also, if the user enter a positive number, let us say 9, the console will print: 9 is a positive number . If the user enters a string, the console will print:_____ is a string. 
+                </li>
+
+                <li>
+                    
+<b>
+    switch statement </b><br>
+Using switch statement, write a JS program that will ask the user to select a color by entering a lowercase or uppercase character. Once the user has selected a color, the console will print a message as: You selected _____ color . If the user enters a character that is not in the list, the program will console: Color is not in the list! 
+                </li>
+            </ol>
+           
         </p>
 
 
 
     
         <script type="text/javascript">
+
+            // var value = prompt(`Please enter a number or string: `);
+
+            // if(isNaN(value))
+            // {
+            //     console.log(`${value} is a string`);
+            // }
+            // else
+            // {
+
+            //     parseInt(value);
+
+            //     if(value < 0)
+            //     {
+            //         console.log(`${value} is a Negative Number`);
+            //     }
+            //     else if(value > 0)
+            //     {
+            //         console.log(`${value} is a Positive Number`);
+            //     }
+            //     else
+            //     {
+            //         console.log(`${value} is Zero`);
+            //     }
+            // }
+
+
+            var colorsList = new Array('Red','Blue','Green');
+
+            var color = prompt(`Pick a color (type a,b, or c) : \na) Red\nb) Blue\nc) Green`);
+
+            color.toLowerCase();
+
+            switch(color)
+            {
+                case 'a':
+                console.log('The selected color is red');
+                break;
+                case 'b':
+                console.log('The selected color is blue');
+                break;
+                case 'c':
+                console.log('The selected color is green');
+                break;
+                default:
+                console.log('Color is not in the list!');
+            }
+
+           
+
+
 
         
         </script>
