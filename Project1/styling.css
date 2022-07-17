@@ -13,6 +13,21 @@ ul{
     margin: 0;
 }
 
+.btn1{
+    border: 0;
+    height: 38px;
+    background:#e8491d ;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.btn1:hover{
+    background-color: #f4f4f4;
+    color: #e8491d;
+}
+
 .container{
     width: 80%; /* precentage to make it responsive not px */
     margin: auto; /* that will move it to the middle */
@@ -83,10 +98,142 @@ header a:hover{
 #content img{
     size: 100%;
     padding-top: 20px;
+    padding-left: 10px;
     opacity: 50%;
+    
 }
 
 #content{
     font-size: 20px;
+    
 }
 
+#news_letter{
+
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#news_letter h1{
+    float: left;
+}
+
+#news_letter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#news_letter input[type="email"]{
+    padding: 4px;
+    height: 30px;
+    width: 250px;
+    
+}
+
+/** Table of content */
+#titleTable
+{
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 1;
+    font-style: italic;
+    color: #35424a;   
+}
+
+#content-table{
+    margin-top: 20px;    
+}
+
+#content-table .box{
+    float: right; 
+    width: 50%;
+}
+
+#content-table .box table{
+    width: 100%;
+}
+
+#content-table .box table th{
+    background-color:#f0967d;
+}
+
+td,th{
+    padding: 20px;
+    text-align:center;
+}
+td{
+    background-color:gainsboro;
+}
+
+#content-table #content{
+    float: left;
+    width: 50%;  
+    padding-top: 50px;
+}
+
+
+#content-table #content p{
+    text-align: center;
+    padding-right: 90px;
+    size: 90%;
+}
+
+
+footer{
+    padding: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: #e8491d;
+    text-align: center;
+    height:200px;
+}
+
+footer #contact p{
+    text-align: left;
+    padding-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .footer #info{
+    float: left;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 70px;
+
+}
+
+
+footer .footer #socialmedia a{
+
+    margin-left: 10px;
+
+}
+
+
+/**
+ * Icons
+ */
+
+.fa {
+  padding: 20px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  }
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
