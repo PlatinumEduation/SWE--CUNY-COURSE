@@ -13,6 +13,7 @@ ul{
     margin: 0;
 }
 
+
 .btn1{
     border: 0;
     height: 38px;
@@ -97,10 +98,11 @@ header a:hover{
 
 #content img{
     size: 100%;
-    padding-top: 20px;
-    padding-left: 10px;
-    opacity: 50%;
-    
+    margin-top: 20px;
+    opacity: 50%;    
+}
+#content img:hover{
+    opacity: 40%;
 }
 
 #content{
@@ -237,3 +239,5 @@ footer .footer #socialmedia a{
 .fa:hover {
     opacity: 0.7;
 }
+
+
