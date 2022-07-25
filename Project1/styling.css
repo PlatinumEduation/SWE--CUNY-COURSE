@@ -71,6 +71,9 @@ header #logo{
 
 header #logo h1{
     margin: 0;
+    animation-name: headerH1Animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 header nav{
@@ -144,7 +147,8 @@ header a:hover{
 }
 
 #content-table{
-    margin-top: 20px;    
+    margin-top: 20px; 
+    margin-bottom: 20px;   
 }
 
 #content-table .box{
@@ -181,10 +185,21 @@ td{
     size: 90%;
 }
 
+/***********************      third topic     *******************************************/
+#list-of-content{
+    background-color:#55ACEE;
+    display: flex;
+}
+
+.column{
+    float: left;
+    width: 30.33%;
+    padding: 15px;
+}
+
 
 footer{
     padding: 30px;
-    margin-top: 20px;
     color: white;
     background-color: #e8491d;
     text-align: center;
@@ -241,3 +256,11 @@ footer .footer #socialmedia a{
 }
 
 
+
+@keyframes headerH1Animation {
+    0% {transform: translateX(0px);}
+    50% {transform: translateY(150px);}
+    100% {
+        font-size: 40px;
+    }
+}
