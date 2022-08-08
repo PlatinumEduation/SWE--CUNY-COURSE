@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json and Ajax</title>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Json & Ajax</h1>
+        <h2>
+            A >> Asynchronous <span> <i> Not requiring a page refresh</i> </span><br> 
+            J >> JavaScript <br>
+            A >> And <br>
+            X >> XML <strong> it's a data format very similar to JSON </strong>
+        </h2>
+        <button id="btn"> Fetch Info for 3 New Animals </button>
+    </header>
+
+    <div id="animal-info"></div>
+
+    <!--js file -->
+    <script type="text/javascript">
+
+        //that's creating an object >> a data lives in an object 
+        var cat = {
+            "name": "Meowsalat",
+            "species": "cat",
+            "favFood":"tuna"
+        }
+
+        //if i want to access this data object 
+
+        //car.favFood
+
+        //Arrays 
+
+        //create a single variable that contains all my favourite colors
+        var myFavColors = ["blue","green","yellow","orange","purple","red"];
+
+        // accessing data in an array
+        myFavColors[2];
+
+        // combining objects with arrays = Json >> javascript object notation
+        var ThePets = [
+            {
+                "name": "Meowsalat",
+                "species": "cat",
+                "favFood":"tuna"
+            },
+
+            {
+                "name": "Barkey",
+                "species": "dog",
+                "favFood":"carrots"
+            }
+
+        ]
+
+        // to access the data 
+
+        //ThePets[1].favFood // will return a value of carrots
+
+        // web browsers have a built in tool named  "XMLHttpRequest" >> will establish the connection with the url that we specify
+
+        //var ourRequest = new XMLHttpRequest();
+
+        //ourRequest.open('GET','https://learnwebcode.github.io/json-example/animals-1.json'); //first is the http request method, second is the URL in json data
+
+        //ourRequest.onload = function(){ // anonymous function
+            //console.log(ourRequest.responseText);
+
+            //save this data in a variable
+
+           // var ourData = JSON.parse(ourRequest.responseText); // to tell the browser this is a json data not an array
+
+            //console.log(ourData[1]);
+        //}
+        //send the request to the server
+
+        //ourRequest.send();
+
+        var pageCounter = 1;
+        var btn = document.getElementById("btn");
+        var animalInfo = document.getElementById("animal-info");
+
+        btn.addEventListener("click",function()
+        {
+            var ajaxCall = new XMLHttpRequest();
+
+            ajaxCall.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+            
+            ajaxCall.onload = function()
+            { // anonymous function()
+
+                console.log("asd");
+                var data = JSON.parse(ajaxCall.responseText);
+                renderHTML(data);
+
+            };
+
+            ajaxCall.send();
+
+            pageCounter++;
+
+            if (pageCounter >= 3)
+            {
+                btn.classList.add("hide-me");
+            }
+
+        });
+
+        //function is to create and add html to the page
+
+        function renderHTML(data){
+            var htmlString = "";
+            for(var i=0;i<data.length;i++){
+                htmlString += "<p>" + data[i].name + "is a " + data[i].species + ".</p>"; 
+            }
+            animalInfo.insertAdjacentHTML('beforeend',htmlString);
+        }
+
+    </script>
+</body>
+</html>
